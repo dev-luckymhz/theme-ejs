@@ -1,0 +1,43 @@
+<!-- views/partials/productCard.ejs -->
+<div class="product__item <%= isSlider ? 'swiper-slide' : '' %>">
+    <div class="product__banner">
+        <a href="/details" class="product__images">
+            <img src="<%= product.defaultImg %>" alt="" class="product__img default">
+            <img src="<%= product.hoverImg %>" alt="" class="product__img hover">
+        </a>
+        <div class="product__actions">
+            <a href="" class="action__btn" aria-label="Quick view">
+                <i class="ri-eye-line"></i>
+            </a>
+            <a href="" class="action__btn" aria-label="Add to cart">
+                <i class="ri-shopping-cart-line"></i>
+            </a>
+            <a href="" class="action__btn" aria-label="Add to wishlist">
+                <i class="ri-heart-add-fill"></i>
+            </a>
+        </div>
+
+        <div class="product__badge <%= product.badgeColor %>">
+            <%= product.badgeText %>
+        </div>
+    </div>
+
+    <div class="product__content">
+        <span class="product__category"><%= product.category %></span>
+        <a href="/details">
+            <h3 class="product__title"><%= product.title %></h3>
+        </a>
+        <div class="product__rating">
+            <% for (let i = 0; i < 5; i++) { %>
+                <i class="ri-star-s-line"></i>
+            <% } %>
+        </div>
+        <div class="product__price flex_es">
+            <span class="new__price"><%= product.newPrice %></span>
+            <span class="old__price"><%= product.oldPrice %></span>
+        </div>
+        <a href="" class="action__btn cart__btn" aria-label="Add to cart">
+            <i class="ri-shopping-cart-line"></i>
+        </a>
+    </div>
+</div>

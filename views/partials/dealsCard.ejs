@@ -1,0 +1,40 @@
+<!-- views/partials/dealsCard.ejs -->
+<div class="deals__item" style="background-image: url(<%= deal.bgImg %>);">
+    <div class="deals__group">
+        <h3 class="deals__brand"><%= deal.brand %></h3>
+        <span class="deals__category"><%= deal.category %></span>
+    </div>
+
+    <h4 class="deals__title"><%= deal.title %></h4>
+
+    <div class="deals__price flex_es">
+        <span class="new__price"><%= deal.newPrice %></span>
+        <span class="old__price"><%= deal.oldPrice %></span>
+    </div>
+
+    <div class="deals__group">
+        <p class="deals__countdown-text">Hurry up! offer End in:</p>
+        <div class="countdown" data-countdown='<%= JSON.stringify(deal.countdown) %>'>
+            <div class="countdown__amount">
+                <p class="countdown__period days"></p>
+                <span class="unit">Days</span>
+            </div>
+            <div class="countdown__amount">
+                <p class="countdown__period hours"></p>
+                <span class="unit">Hours</span>
+            </div>
+            <div class="countdown__amount">
+                <p class="countdown__period minutes"></p>
+                <span class="unit">mins</span>
+            </div>
+            <div class="countdown__amount">
+                <p class="countdown__period seconds"></p>
+                <span class="unit">second</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="deals__btn">
+        <div class="shop__btn shop__btn--md">Shop Now</div>
+    </div>
+</div>

@@ -1,0 +1,39 @@
+<!-- Inside views/index.ejs -->
+<section class="products container_es section_es">
+    <!-- Tab Buttons -->
+    <div class="tab__btns">
+        <span class="tab__btn active-tab" data-tab="featured">Featured</span>
+        <span class="tab__btn" data-tab="popular">Popular</span>
+        <span class="tab__btn" data-tab="new">New added</span>
+    </div>
+
+    <!-- Tab Contents -->
+    <div class="tab__items">
+        <!-- Featured -->
+        <div class="tab__item active-tab-content" data-content="featured">
+            <div class="products__container grid_es">
+                <% featuredProducts.forEach(product => { %>
+                    <%- include('../partials/productCard', { product: product, isSlider: false }) %>
+                <% }) %>
+            </div>
+        </div>
+
+        <!-- Popular -->
+        <div class="tab__item" data-content="popular">
+            <div class="products__container grid_es">
+                <% popularProducts.forEach(product => { %>
+                    <%- include('../partials/productCard', { product: product, isSlider: false }) %>
+                <% }) %>
+            </div>
+        </div>
+
+        <!-- New Added -->
+        <div class="tab__item" data-content="new">
+            <div class="products__container grid_es">
+                <% newProducts.forEach(product => { %>
+                    <%- include('../partials/productCard', { product: product, isSlider: false }) %>
+                <% }) %>
+            </div>
+        </div>
+    </div>
+</section>

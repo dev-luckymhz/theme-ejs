@@ -1,0 +1,12 @@
+<section class="categories container_es section_es">
+    <h3 class="section__title"><span>Popular</span> categories</h3>
+    <div class="categories__container swiper mySwiper">
+        <div class="swiper-wrapper">
+            <% categories.forEach(cat => { %>
+                <%- include('../partials/categoryCard', cat) %>
+            <% }) %>
+        </div>
+        <div class="swiper-button-next"><i class="ri-arrow-right-s-line"></i></div>
+        <div class="swiper-button-prev"><i class="ri-arrow-left-s-line"></i></div>
+    </div>
+</section>

@@ -1,0 +1,14 @@
+<section class="product__slides section_es container_es">
+    <h3 class="section__title"><span>Popular</span> Product</h3>
+    <div class="categories__container swiper productSwiper">
+        <div class="swiper-wrapper">
+
+            <% products.forEach(product => { %>
+                <%- include('../partials/productCard', { product: product, isSlider: true }) %>
+            <% }) %>
+
+        </div>
+        <div class="swiper-button-next"><i class="ri-arrow-right-s-line"></i></div>
+        <div class="swiper-button-prev"><i class="ri-arrow-left-s-line"></i></i></div>
+    </div>
+</section>

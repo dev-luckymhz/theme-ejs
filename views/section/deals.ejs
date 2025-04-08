@@ -1,0 +1,7 @@
+<section class="deals section_es">
+    <div class="deals__container container_es grid_es">
+        <% deals.forEach(deal => { %>
+            <%- include('../partials/dealsCard', { deal }) %>
+        <% }) %>
+    </div>
+</section>

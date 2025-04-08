@@ -1,0 +1,11 @@
+<!-- Inside views/index.ejs -->
+<section class="products container_es section_es">
+    <h3 class="section__title"><span>Popular</span> Product</h3>
+
+    <div class="products__container grid_es">
+        <% products.forEach(product=> { %>
+            <%- include('../partials/productCard', { product: product, isSlider: false }) %>
+                <% }) %>
+    </div>
+
+</section>
